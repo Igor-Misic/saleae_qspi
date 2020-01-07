@@ -72,8 +72,11 @@ QSPIAnalyzerSettings::QSPIAnalyzerSettings()
 
 	mAddressSizeInterface.reset(new AnalyzerSettingInterfaceNumberList());
 	mAddressSizeInterface->SetTitleAndTooltip("Address Size (bytes)", "");
-	mAddressSizeInterface->AddNumber(3, "Three", "three byte addresses");
-	mAddressSizeInterface->AddNumber(4, "Four", "four byte addresses");
+	mAddressSizeInterface->AddNumber(0, "None", "None byte address");
+	mAddressSizeInterface->AddNumber(1, "One", "One byte address");
+	mAddressSizeInterface->AddNumber(2, "Two", "Two byte addresses");
+	mAddressSizeInterface->AddNumber(3, "Three", "Three byte addresses");
+	mAddressSizeInterface->AddNumber(4, "Four", "Four byte addresses");
 	mAddressSizeInterface->SetNumber(mAddressSize);
 
 
